@@ -1,0 +1,618 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+ /* шапка */
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 0;
+}
+
+.logo img {
+    height: 80px;
+    width: 80px;
+}
+
+.slogan {
+    flex: 1;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    font-weight: bold;
+    color: #333;
+    font-size: 18px;
+}
+
+.address {
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    border-right: 1px solid #ccc;
+}
+
+.phone {
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.navigation {
+    background-color: #840007;
+    display: flex;
+    height: 50px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+    padding: 10px;
+    max-height: 80%;
+    top: 10%;
+    border-right: 2px solid rgba(255, 255, 255, 0.7);
+    box-sizing: border-box;
+}
+
+.navigation a:last-child {
+    border-right: none;
+}
+
+.navigation a:hover {
+    background-color: #A52A2A;
+}
+
+.navigation a span {
+    display: inline-block;
+    padding: 0 10px;
+    line-height: normal;
+    text-align: center;
+    width: 100%;
+}
+
+ /* Разделительные линии и "Заголовок" */
+
+hr {
+    width: 95%;
+    border-color: #840007;
+}
+
+.mainsec {
+    text-align: center;
+}
+
+/* Верхний баннер */
+
+.text-banner {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.8); 
+    background-color: #aaaaaa86; 
+    padding: 20px;
+    backdrop-filter: blur(3px);
+    border-radius: 15px;
+}
+
+.text-banner hr {
+    border-color: rgb(255, 187, 0);
+    color: rgb(255, 187, 0);
+}
+
+.Mbtn {
+    width: 50%;
+    height: 70px;
+    font-size: 20px;
+    margin-top: 5%;
+    color: #ffffff;
+    background-color: #840007;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.mainsection {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url("images/MainImange.webp");
+    background-size: cover;
+    display: flex;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    color: white;
+    padding-top: 5%;
+}
+
+ /* Почему мы? */
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9e6e6;
+    transition: 0.3s;
+}
+
+.card-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+    width: 70px;
+    height: 70px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #333;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+ /* Акции */
+
+.discount-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.discount-card {
+    background-color: #fff;
+    border: 2px solid #ff9999;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.discount-card-icon {
+    font-size: 30px;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.discount-card-text {
+    text-align: left;
+    font-size: 16px;
+    color: #333;
+}
+
+.discount-highlight {
+    color: #ff3333;
+    font-weight: bold;
+}
+
+.discount-card:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* Дополнительные услуги */
+
+.services-slider-container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.services-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.services-tab-button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.services-tab-button.active {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.services-slider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.services-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-slide.active {
+  opacity: 1;
+}
+
+.services-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.services-slide-content {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ /* FAQ */
+
+ .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    padding: 15px 20px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.faq-question:hover {
+    background-color: #f9f9f9;
+}
+
+.faq-icon {
+    font-size: 24px;
+    color: #ff3333;
+    font-weight: bold;
+}
+
+.faq-answer {
+    padding: 0 20px 15px;
+    color: #555;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+/* Слайдер с авто */
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider {
+    display: flex;
+    height: 100%;
+    transition: 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 150%;
+    height: 100%;
+    object-fit: contain;
+}
+
+section{
+    padding-top: 3%;
+    padding-bottom: 3%;
+
+}
+
+/* Карта */
+
+.map {
+    text-align: center;
+}
+
+/* Отзывы */
+
+.reviews-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.reviews-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.reviews-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.review {
+    min-width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review-content {
+    margin-top: 10px;
+}
+
+.review-author {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.review-date {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.review-rating {
+    color: #ffd700;
+    font-size: 16px;
+}
+
+/* Футер */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    padding-right: 25%;
+    padding-left: 25%;
+    background-color: #f8f8f8;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #840007;
+    padding: 5px;
+    
+}
+
+.footer a:hover {
+    color: #007BFF;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    
+}
+
+.footer-info .logo img {
+    width: 100px;
+    height: auto;
+}
+
+.footer-info .slogan,
+.footer-info .address,
+.footer-info .phone {
+    text-align: right;
+}
+
+ /* Модальное окно "Записаться" */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-image: url(images/ticketback.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="tel"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content label {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.modal-content label input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.submit-btn {
+    background-color: #8B0000;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.telegram-btn, .max-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 40%;
+}
+
+.telegram-btn {
+    background-color: #0088cc;
+    color: white;
+    text-decoration: none;
+}
+
+.max-btn {
+    background-color: #002fff;
+    color: rgb(255, 255, 255);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #333;
+}

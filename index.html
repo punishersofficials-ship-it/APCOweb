@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images/Logotip.svg">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <title>Автошкола АРСО</title>
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo">
+                <img src="images/Logotip.svg">
+            </div>
+            <div class="slogan">
+                С нами - С правами!
+            </div>
+            <div class="address">
+                г. Омск, пр. Мира 3/3
+            </div>
+            <div class="phone">
+                +7-908-800-82-08
+            </div>
+        </div>
+        <div class="navigation">
+            <a href="#about"><span>О нас</span></a>
+            <!-- <a href="#"><span>Обучение</span></a>  -->
+            <!-- <a href="#"><span>Стоимость</span></a> -->
+            <a href="#discount"><span>Акции</span></a>
+            <!-- <a href="#"><span>Фотогалерея</span></a> -->
+            <a href="#faq"><span>Вопросы-ответы</span></a>
+            <a href="#map"><span>Контакты</span></a>
+            <a href="#reviews"><span>Отзывы</span></a>
+        </div>
+        <section class="mainsection">
+            <!----------------------------------------------------Кнопка------------------------------->
+            <div class="text-banner">
+                Категория "В" в Омске!<br>
+                Теория+вождение+экзамен<br>
+                Начни обучение от <span style="color: rgb(0, 255, 34);">16 490 ₽</span>
+                <hr>
+                <button id="ModalW" class="Mbtn" data-modal="modal">Записаться</button>
+            </div>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Оставь заявку и получи скидку</h2>
+                    <form id="newticket">
+                        <input type="text" id="name" name="name" placeholder="Имя" required>
+                        <input type="tel" id="phone" name="phone" placeholder="Номер телефона" required>
+                        <label>
+                            <input type="checkbox" id="agreement" name="agreement" required>
+                            Настоящим даю согласие на обработку моих персональных данных
+                        </label>
+                        <button type="submit" class="submit-btn">Записаться</button>
+                    </form>
+                    <div class="social-buttons">
+                        <a class="telegram-btn" href="https://t.me/+79088008208" target="_blank">Написать в Telegram</a>
+                        <a class="max-btn">Написать в MAX</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr id="about"> <h2 class="mainsec">Почему мы?</h2> <hr>
+        <section class="cards-container">
+            <div class="card">
+                <img src="images/distant.svg" class="card-icon">
+                <div class="card-title">Дистанционное обучение</div>
+                <div class="card-description">Теорию можно изучать в удобной форме: видеоуроки в мобильном приложении.</div>
+            </div>
+
+            <div class="card">
+                <img src="images/money.svg" class="card-icon">
+                <div class="card-title">Рассрочка без переплат</div>
+                <div class="card-description">Никаких скрытых платежей и компенсаций. Рассрочка на 2,5 месяца. Заключи договор, и цена не изменится.</div>
+            </div>
+
+            <div class="card">
+                <img src="images/manager.svg" class="card-icon">
+                <div class="card-title">Личный менеджер 24/7</div>
+                <div class="card-description">Готовы ответить на любой ваш вопрос в любое время.</div>
+            </div>
+
+            <div class="card">
+                <img src="images/akppmkpp.svg" class="card-icon">
+                <div class="card-title">Автомат по цене механики</div>
+                <div class="card-description">В процессе обучения можно заменить коробку передач бесплатно.</div>
+            </div>
+
+            <div class="card">
+                <img src="images/auto.svg" class="card-icon">
+                <div class="card-title">Современный автопарк</div>
+                <div class="card-description">Разнообразие современных машин для всех категорий.</div>
+            </div>
+
+            <div class="card">
+                <img src="images/unlimited.svg" class="card-icon">
+                <div class="card-title">Внутренний экзамен</div>
+                <div class="card-description">Экзамен включен в стоимость обучения. Безлимит на пересдачу.</div>
+            </div>
+        </section>
+        <hr id="discount"> <h2 class="mainsec">Акции</h2> <hr>
+        <section class="discount-cards-container">
+            <div class="discount-card">
+                <img class="discount-card-icon" src="images/prize.svg">
+                <div class="discount-card-text">Скидка в день рождения на обучение</div>
+            </div>
+
+            <div class="discount-card">
+                <img class="discount-card-icon" src="images/student.svg">
+                <div class="discount-card-text">Для студентов<br><span class="discount-highlight">Скидка 6000 руб.</span></div>
+            </div>
+
+            <div class="discount-card">
+                <img class="discount-card-icon" src="images/car.svg">
+                <div class="discount-card-text">Скидка на обучение категории "В" <span class="discount-highlight">5000 руб.</span></div>
+            </div>
+
+            <div class="discount-card">
+                <img class="discount-card-icon" src="images/sales.svg">
+                <div class="discount-card-text">Вернем 13% от стоимости обучения.</div>
+            </div>
+        </section>
+        <hr id="addservices"> <h2 class="mainsec">Доступные улуги</h2> <hr>
+        <section class="addservices">
+            <div class="services-slider-container">
+                <div class="services-tabs">
+                    <button class="services-tab-button active" data-services-slide="0">Категория В - МКПП и АКПП</button>
+                    <button class="services-tab-button" data-services-slide="1">Дополнительные вождение</button>
+                    <button class="services-tab-button" data-services-slide="2">Переподготовка С на В</button>
+                </div>
+                <div class="services-slider">
+                    <div class="services-slide active">
+                    <img src="images/kategorija-b.webp">
+                    <div class="services-slide-content">
+                        <h2>Первоначальный взнос 3 000 Р</h2>
+                        <h3>В ОБУЧЕНИЕ ВХОДИТ:</h3>
+                        <ul>
+                        <li>Теория (очно/дистанционно)</li>
+                        <li>Вождение в удобное время (56 практических часов)</li>
+                        <li>Комфортная цена</li>
+                        <li>Обучение - в удовольствие</li>
+                        <li>Без финансовых сюрпризов</li>
+                        <li>Подготовим все документы в ГИБДД, сдача экзамена на нашем учебном автомобиле</li>
+                        </ul>
+                    </div>
+                    </div>
+
+                    <div class="services-slide">
+                    <img src="images/dopolnitelnoe-vozhdenie.webp">
+                    <div class="services-slide-content">
+                        <h2>Дополнительные вождение:</h2>
+                        <ul>
+                        <li>Подготовка к экзамену (теория+вождение)</li>
+                        </ul>
+                        <h3>Дополнительное вождение:</h3>
+                        <ul>
+                        <li>МКПП</li>
+                        <li>АКПП</li>
+                        </ul>
+                        <p>1 занятие (120 мин) = 1 900 Р</p>
+                    </div>
+                    </div>
+
+                    <div class="services-slide">
+                    <img src="images/perepodgotovka.webp">
+                    <div class="services-slide-content">
+                        <h2>Переподготовка с категории "С" на категорию "В"</h2>
+                        <p>18 000 Р</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr id="faq"> <h2 class="mainsec">Ответы на часто задаваемые вопросы</h2> <hr>
+        <section class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Мне нет 18 лет, могу ли я учиться в Автошколе?</span>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer" style="display: none;">
+                    Вы можете пройти курс обучения с 16 лет, с согласия представителя на сдачу экзамена сдать экзамен в ГИБДД с 17 лет. Водительское удостоверение Вы получите в день совершеннолетия.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>У меня нет Омской прописки. Могу ли я получить водительское удостоверение?</span>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer" style="display: none;">
+                    Конечно, Вы сможете пройти полный курс обучения в нашей Автошколе, сдать экзамен, получить водительское удостоверение при наличии прописки в любом другом регионе РФ.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Какова длительность обучения в Автошколе?</span>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer" style="display: none;">
+                    Курс обучения по категории «В» до 2,5 месяцев
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Есть ли варианты рассрочки в вашей Автошколе?</span>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer" style="display: none;">
+                    Мы предоставляем беспроцентную рассрочку. Вы можете приступить к обучению, заплатив только 1000 ₽! Оставшуюся сумму Вы должны будете внести по индивидуальному графику платежей.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Работаю допоздна, часто свободен только по выходным. Что можете мне предложить?</span>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer" style="display: none;">
+                    Изучайте теорию дистанционно в нашем приложении! Вождение организуем в удобное для вас время, 7 дней в неделю!
+                </div>
+            </div>
+        </section>
+        <!-- Слайдер с авто -->
+        <div class="slider-container">
+            <div class="slider">
+                <img class="slide active" src="images/cherryAPCO.webp"></img>
+                <img class="slide" src="images/ladaAPCO.webp"></img>
+            </div>
+        </div>
+        <!-- Карта -->
+        <div class="map" id="map">
+            <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/arso/203707284124/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Арсо</a><a href="https://yandex.ru/maps/66/omsk/category/driving_school/184105264/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Автошкола в Омске</a><iframe src="https://yandex.ru/map-widget/v1/?ll=73.301488%2C55.021514&mode=search&oid=203707284124&ol=biz&z=21" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+        </div>
+        <!-- Отзывы -->
+        <hr id="reviews"> <h2 class="mainsec">Последние отзывы</h2> <hr>
+        <section class="reviews-container">
+            <div class="reviews-slider">
+                <div class="review">
+                    <div class="review-content">
+                        <div class="review-author">Владимир Белов</div>
+                        <p class="review-text">Отличная автошкола. Инструктора отличные люди, вежливые, отзывчивые. 
+                            Если что то не получается, всегда помогут и покажут. Ни каких проблем с вождением у вас не будет. 
+                            Теория учиться дистанционно. Удобное приложение в котором все легко и понятно. Вождение подстраивают под ваше удобное время. 
+                            Машины отличные, ни каких проблем нету. В общем говорить можно много. Автошкола 10/10. Рекомендую!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <footer>
+            <div class="footer">
+                <a href="#about"><span>О нас</span></a>
+                <!-- <a href="#"><span>Обучение</span></a> -->
+                <!-- <a href="#"><span>Стоимость</span></a> -->
+                <a href="#discount"><span>Акции</span></a>
+                <!-- <a href="#"><span>Фотогалерея</span></a> -->
+                <a href="#faq"><span>Вопросы-ответы</span></a>
+                <a href="#map"><span>Контакты</span></a>
+                <a href="#reviews"><span>Отзывы</span></a>
+            </div>
+            <div class="footer-info">
+                <div class="logo">
+                    <img src="images/Logotip.svg">
+                </div>
+                <div class="slogan">
+                    С нами - С правами!
+                </div>
+                <div class="address">
+                    г. Омск, пр. Мира 3/3
+                </div>
+                <div class="phone">
+                    +7-908-800-82-08
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

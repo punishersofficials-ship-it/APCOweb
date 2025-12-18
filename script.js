@@ -1,0 +1,89 @@
+// Модальное окно
+document.addEventListener("DOMContentLoaded", function() {
+    const modalBtns = document.querySelectorAll('[data-modal]');
+    const modals = document.querySelectorAll('.modal');
+    const closeBtns = document.querySelectorAll('.close');
+    modalBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const modalId = this.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    closeBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const modal = this.closest('.modal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+    });
+    window.addEventListener('click', function(e) {
+        if (e.target.classList.contains('modal')) {
+            e.target.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+    const form = document.getElementById("newticket");
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const name = document.getElementById("name").value;
+        const phone = document.getElementById("phone").value;
+        const agreement = document.getElementById("agreement").checked;
+
+        if (!agreement) {
+            alert("Пожалуйста, подтвердите согласие на обработку данных.");
+            return;
+        }
+        const formData = { name, phone };
+        let database = JSON.parse(localStorage.getItem("tickets") || "[]");
+        database.push(formData);
+        localStorage.setItem("tickets", JSON.stringify(database));
+
+        alert("Данные успешно отправлены!");
+        form.reset();
+        const modal = document.getElementById("modal");
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+});
+// Слайдер с авто
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    function updateSlider() {
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlider();
+    }, 5000);
+});
+//  Допуслуги
+document.addEventListener('DOMContentLoaded', function() {
+  const tabButtons = document.querySelectorAll('.services-tab-button');
+  const slides = document.querySelectorAll('.services-slide');
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const slideIndex = button.getAttribute('data-services-slide');
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      slides.forEach(slide => slide.classList.remove('active'));
+      button.classList.add('active');
+      slides[slideIndex].classList.add('active');
+    });
+  });
+});
+// FAQ
+function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.faq-icon');
+
+            if (answer.style.display === 'none' || !answer.style.display) {
+                answer.style.display = 'block';
+                icon.textContent = '−';
+            } else {
+                answer.style.display = 'none';
+                icon.textContent = '+';
+            }
+        }
