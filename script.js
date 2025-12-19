@@ -1,4 +1,5 @@
 // Модальное окно
+
 document.addEventListener("DOMContentLoaded", function() {
     const modalBtns = document.querySelectorAll('[data-modal]');
     const modals = document.querySelectorAll('.modal');
@@ -47,7 +48,9 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.style.overflow = 'auto';
     });
 });
+
 // Слайдер с авто
+
 document.addEventListener('DOMContentLoaded', function() {
     const slider = document.querySelector('.slider');
     const slides = document.querySelectorAll('.slide');
@@ -61,20 +64,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 5000);
 });
 //  Допуслуги
+
 document.addEventListener('DOMContentLoaded', function() {
-  const tabButtons = document.querySelectorAll('.services-tab-button');
-  const slides = document.querySelectorAll('.services-slide');
-  tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const slideIndex = button.getAttribute('data-services-slide');
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      slides.forEach(slide => slide.classList.remove('active'));
-      button.classList.add('active');
-      slides[slideIndex].classList.add('active');
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabs = document.querySelectorAll('.tab');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const tabId = button.getAttribute('data-tab');
+
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            button.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        });
     });
-  });
 });
+
 // FAQ
+
 function toggleFaq(element) {
             const answer = element.nextElementSibling;
             const icon = element.querySelector('.faq-icon');
@@ -86,4 +95,4 @@ function toggleFaq(element) {
                 answer.style.display = 'none';
                 icon.textContent = '+';
             }
-        }
+}
