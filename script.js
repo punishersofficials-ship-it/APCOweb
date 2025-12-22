@@ -82,6 +82,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// burger-menu
+
+document.addEventListener('DOMContentLoaded', function() {
+    const burgerIcon = document.querySelector('.burger-icon');
+    const menu = document.querySelector('.menu');
+    const menuLinks = document.querySelectorAll('.footer a');
+    burgerIcon.addEventListener('click', function() {
+        burgerIcon.classList.toggle('active');
+        menu.classList.toggle('active');
+    });
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            burgerIcon.classList.remove('active');
+            menu.classList.remove('active');
+        });
+    });
+});
+
 // FAQ
 
 function toggleFaq(element) {

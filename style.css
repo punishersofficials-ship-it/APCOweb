@@ -287,7 +287,7 @@ hr {
 
 .tab-text-overlay {
     width: 100%;
-    height: 100%;
+    height: 50%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -298,7 +298,6 @@ hr {
     max-width: 45%;
     width: auto;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 5px;
     color: white;
     text-align: left;
@@ -306,9 +305,47 @@ hr {
     bottom: 20%;
 }
 
+/* Доп услуги adaptive */
+
+.tab-adaptive {
+    display: none;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 800px;
+    margin-left: 10%;
+}
+
+.tab-card {
+    background-color: #fff;
+    border: 2px solid #ff9999;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+    justify-content: flex-start;
+    gap: 15px;
+    max-width: 85%;
+    justify-items: center;
+}
+
+.tab-card-text {
+    text-align: left;
+    font-size: 16px;
+    color: #333;
+}
+
+.tab-highlight {
+    color: #ff3333;
+    font-weight: bold;
+}
+
+.tab-card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease;
+}
+
  /* FAQ */
 
- .faq-container {
+.faq-container {
     max-width: 800px;
     margin: 0 auto;
 }
@@ -460,22 +497,60 @@ section{
 }
 
 /* Футер */
-
 footer {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    padding-right: 25%;
-    padding-left: 25%;
-    background-color: #f8f8f8;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px; 
+    gap: 15%;
 }
 
 .addresss {
     text-align: center;
-    background-color: #fff;
     padding: 10px;
     font-size: 14px;
     color: #333;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* burger-menu */
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+    position: fixed;
+    margin-right: 20px;
+}
+
+.burger-icon {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.burger-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #840007;
+    transition: all 0.3s ease;
+}
+
+/* Меню */
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer {
@@ -485,15 +560,9 @@ footer {
 }
 
 .footer a {
+    color: #333;
     text-decoration: none;
-    color: #ffffff;
-    background-color: #840007;
-    padding: 5px;
-    
-}
-
-.footer a:hover {
-    color: #007BFF;
+    font-size: 18px;
 }
 
 .footer-info {
@@ -501,15 +570,14 @@ footer {
     flex-direction: column;
     align-items: flex-end;
     gap: 10px;
-    
 }
 
 .footer-info .logo img {
     width: 100px;
-    height: auto;
+    height: 100px;
 }
 
-.footer-info .slogan,
+
 .footer-info .address,
 .footer-info .phone {
     text-align: right;
@@ -652,6 +720,7 @@ footer {
     .navigation {
         flex-direction: column;
         height: auto;
+        display: none;
     }
 
     .navigation a {
@@ -702,13 +771,17 @@ footer {
         font-size: 14px;
     }
 
-    .tab img{
+    .tabs-container{
         display: none;
+    }
+    .tab-adaptive {
+        display: grid;
     }
 
     .slider img {
         padding: 30px 0 0 0;
-        height: 220px;
+        height: 180px;
+        margin-right: 2%;
         width: 100%;
     }
 
@@ -718,6 +791,44 @@ footer {
 
     .review {
         min-width: auto;
+    }
+
+    .burger-menu {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+    }
+
+    .menu.active {
+        transform: translateX(0);
+    }
+
+    .burger-icon.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger-icon.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-icon.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
     }
 
     footer {
@@ -750,5 +861,8 @@ footer {
 
     .faq-question {
         font-size: 12px;
+    }
+    .navigation {
+        display: none;
     }
 }
