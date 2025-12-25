@@ -80,7 +80,7 @@ hr {
 .text-banner {
     position: absolute;
     top: 50%;
-    left: 15%;
+    left: 18%;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 30px;
@@ -294,7 +294,6 @@ hr {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding-right: 10%;
 }
 
 .tab-text-overlay-content {
