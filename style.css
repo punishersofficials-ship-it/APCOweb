@@ -393,7 +393,47 @@ hr {
 
 /* Слайдер с авто */
 
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
 
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide.next {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.slide.prev {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
 
 /*  */
 
@@ -752,6 +792,14 @@ footer {
 
     .reviews-slider {
         flex-direction: column;
+    }
+
+    .slider {
+        max-height: 300px;
+    }
+    .slide img {
+        object-fit: contain;
+        max-height: 300px;
     }
 
     .review {

@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const name = document.getElementById("name").value;
         const phone = document.getElementById("phone").value;
         const agreement = document.getElementById("agreement").checked;
-
         if (!agreement) {
             alert("Пожалуйста, подтвердите согласие на обработку данных.");
             return;
@@ -40,8 +39,6 @@ document.addEventListener("DOMContentLoaded", function() {
         let database = JSON.parse(localStorage.getItem("tickets") || "[]");
         database.push(formData);
         localStorage.setItem("tickets", JSON.stringify(database));
-
-        alert("Данные успешно отправлены!");
         form.reset();
         const modal = document.getElementById("modal");
         modal.style.display = 'none';
@@ -52,27 +49,30 @@ document.addEventListener("DOMContentLoaded", function() {
 // Слайдер с авто
 
 document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.querySelector('.slider');
     const slides = document.querySelectorAll('.slide');
     let currentSlide = 0;
-    function updateSlider() {
-        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    function showSlide(n) {
+        slides[currentSlide].classList.remove('active');
+        slides[currentSlide].classList.add(n > currentSlide ? 'prev' : 'next');
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].classList.remove('prev', 'next');
+        slides[currentSlide].classList.add('active');
     }
-    setInterval(() => {
-        currentSlide = (currentSlide + 1) % slides.length;
-        updateSlider();
-    }, 5000);
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+    setInterval(nextSlide, 3000);
 });
+
+
 //  Допуслуги
 
 document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabs = document.querySelectorAll('.tab');
-
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
             const tabId = button.getAttribute('data-tab');
-
             tabButtons.forEach(btn => btn.classList.remove('active'));
             tabs.forEach(tab => tab.classList.remove('active'));
 
@@ -105,7 +105,6 @@ document.addEventListener('DOMContentLoaded', function() {
 function toggleFaq(element) {
             const answer = element.nextElementSibling;
             const icon = element.querySelector('.faq-icon');
-
             if (answer.style.display === 'none' || !answer.style.display) {
                 answer.style.display = 'block';
                 icon.textContent = '−';
