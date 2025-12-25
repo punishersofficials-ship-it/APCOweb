@@ -720,6 +720,10 @@ footer {
         align-items: center;
     }
 
+    .mainsection {
+        background-position-x: 45%;
+    }
+    
     .logo img {
         height: 50px;
     }
@@ -876,4 +880,5 @@ footer {
     .navigation {
         display: none;
     }
+
 }
