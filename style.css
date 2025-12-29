@@ -94,8 +94,8 @@ hr {
 }
 
 .text-banner hr {
-    border-color: rgb(255, 187, 0);
-    color: rgb(255, 187, 0);
+    border-color: rgb(49, 49, 49);
+    color: rgb(49, 49, 49);
 }
 
 .Mbtn {
@@ -140,12 +140,11 @@ hr {
 
 .card {
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 2px solid #840007;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #f9e6e6;
     transition: 0.3s;
 }
 
@@ -177,7 +176,7 @@ hr {
 
 .discount-cards-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     max-width: 80%;
     margin: 0 auto;
@@ -185,7 +184,7 @@ hr {
 
 .discount-card {
     background-color: #fff;
-    border: 2px solid #ff9999;
+    border: 2px solid #840007;
     border-radius: 25px;
     padding: 20px;
     text-align: center;
@@ -723,7 +722,7 @@ footer {
     .mainsection {
         background-position-x: 45%;
     }
-    
+
     .logo img {
         height: 50px;
     }
@@ -880,5 +879,4 @@ footer {
     .navigation {
         display: none;
     }
-
 }
