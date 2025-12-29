@@ -139,7 +139,6 @@ hr {
 }
 
 .card {
-    background-color: #fff;
     border: 2px solid #840007;
     border-radius: 10px;
     padding: 20px;
@@ -879,4 +878,5 @@ footer {
     .navigation {
         display: none;
     }
+
 }
