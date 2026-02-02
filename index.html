@@ -36,7 +36,7 @@
         <section class="mainsection">
             <div class="text-banner">
                 Расширенный курс категория «В» со скидкой 20% <br>только с 17 по 30 декабря!<br>
- <span style="color: #ff000d; text-shadow:none"> 37 980 ₽ > 30 384 ₽</span><br>
+ <span style="color: #ffffff; text-shadow:none"> <div class="textdec">37 980 ₽ > 30 384 ₽</div> </span>
 Экономия<span style="color: #ff000d; text-shadow:none"> 7 596 ₽</span> <br>
 Лучшее время сейчас!<br>
                 <hr>
@@ -301,9 +301,9 @@
             </div>
         </div>
         <!-- Отзывы -->
-        <hr id="reviews"> <h2 class="mainsec">Последние отзывы</h2> <hr>
         <section class="reviews-container">
-            <div class="reviews-slider">
+            <hr id="reviews"> <h2 class="mainsec">Последние отзывы</h2> <hr>
+            <!-- <div class="reviews-slider">
                 <div class="review">
                     <div class="review-content">
                         <div class="review-author">Владимир Белов</div>
@@ -313,7 +313,33 @@
                             Машины отличные, ни каких проблем нету. В общем говорить можно много. Автошкола 10/10. Рекомендую!</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
+            <div style="display: flex; justify-content: center;margin-top: 20px;border-radius: 20px;">
+                <iframe style="width: 100%; height: 100%; max-width: 1170px; border: none; outline: none; padding: 0; margin: 0" id="myReviews__block-widget">
+                </iframe>
+            </div> 
+            <script src="https://myreviews.dev/widget/dist/index.js" defer></script>
+            <script>
+                (function (){
+                var myReviewsInit = function () {
+                    new window.myReviews.BlockWidget({
+                    uuid: "57773fe8-2732-4265-b76f-2cf2a6e5e420",
+                    name: "g11552622",
+                    additionalFrame:"none",
+                    lang:"ru",
+                    widgetId: "1"
+                    }).init();
+
+                };
+                if (document.readyState === "loading") {
+                document.addEventListener('DOMContentLoaded', function () {
+                    myReviewsInit()
+                })
+                } else {
+                myReviewsInit()
+                }
+                })()
+            </script>
         </section>
         <hr>
 
