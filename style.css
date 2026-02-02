@@ -222,7 +222,7 @@ hr {
 }
 
 .discount-highlight {
-    color: #ff3333;
+    color: #840007;
     font-weight: bold;
 }
 
@@ -256,7 +256,7 @@ hr {
     background-color: #ddd;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 20px;
     transition: background-color 0.3s;
 }
 
@@ -266,7 +266,7 @@ hr {
 
 .tab-button.active {
     background-color: #bbb;
-    color: white;
+    color: rgb(255, 0, 0);
 }
 
 .tabs-content {
