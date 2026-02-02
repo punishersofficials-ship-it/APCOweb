@@ -46,6 +46,33 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const infoBlocks = document.querySelectorAll('.discount-card');
+    infoBlocks.forEach(block => {
+        block.addEventListener('click', function() {
+            const modalId = this.getAttribute('data-modal-id');
+            const modal = document.getElementById(modalId);
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    const closeButtons = document.querySelectorAll('.close');
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const modal = this.closest('.modal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+    });
+    window.addEventListener('click', function(e) {
+        if (e.target.classList.contains('modal')) {
+            e.target.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+});
+
+
 // Слайдер с авто
 
 document.addEventListener('DOMContentLoaded', function() {
