@@ -33,7 +33,7 @@ body {
     display: flex;
     height: 50px;
     position: sticky;
-    top: 10%;
+    top: 12%;
     z-index: 9999;
 }
 
@@ -898,3 +898,4 @@ footer {
         display: none;
     }
 }
+
