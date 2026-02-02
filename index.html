@@ -20,7 +20,7 @@
                 г. Омск, пр. Мира 3/3
             </div>
             <div class="phone">
-                +7-908-800-82-08
+                <a href="tel:+7-908-800-82-08" style="text-decoration: none; cursor:pointer;" class="phone">+79088008208</a>
             </div>
         </header>
         <div class="navigation">
@@ -43,7 +43,7 @@
                 <button id="ModalW" class="Mbtn" data-modal="modal">Записаться</button> <!--Кнопка МО-->
             </div>
             <!----------------------------------------------------Модальное окно------------------------------->
-            <div id="modal" class="modal">
+            <div id="modal" class="modal" style="z-index: 9999;">
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <h2>Оставь заявку и получи скидку</h2>
@@ -103,31 +103,58 @@
         </section>
         <hr id="discount"> <h2 class="mainsec">Акции</h2> <hr>
         <section class="discount-cards-container">
-            <div class="discount-card">
+            <div class="discount-card" data-modal-id="modal1">
                 <img class="discount-card-icon" src="images/prize.svg">
                 <div class="discount-card-text">Скидка в день рождения на обучение</div>
             </div>
+            <div id="modal1" class="modal">
+                <div class="modal-content" style="background-image: none; background-color: #ffffff;">
+                    <span class="close">&times;</span>
+                    <h2>Дарим - 1 000 ₽ от цены обучения всем именинникам на любой пакет</h2>
+                    <button id="ModalW" class="Mbtn" data-modal="modal">Воспользоваться</button>
+                </div>
+            </div>
 
-            <div class="discount-card">
+            <div class="discount-card" data-modal-id="modal2">
                 <img class="discount-card-icon" src="images/student.svg">
                 <div class="discount-card-text">Для студентов<br><span class="discount-highlight">Скидка 6000 руб.</span></div>
             </div>
 
+            <div id="modal2" class="modal">
+                <div class="modal-content" style="background-image: none; background-color: #ffffff;">
+                    <span class="close">&times;</span>
+                    <h2 style="color: #840007;">Это круто!</h2>
+                    <h2>Приходи со студенческим и учись на <br> 1 000 ₽ дешевле</h2>
+                    <button id="ModalW" class="Mbtn" data-modal="modal">Воспользоваться</button>
+                </div>
+            </div>
+            
             <!-- <div class="discount-card">
                 <img class="discount-card-icon" src="images/car.svg">
                 <div class="discount-card-text">Скидка на обучение категории "В" <span class="discount-highlight">5000 руб.</span></div>
             </div> -->
 
-            <div class="discount-card">
+            <div class="discount-card" data-modal-id="modal3">
                 <img class="discount-card-icon" src="images/sales.svg">
                 <div class="discount-card-text">Вернем 13% от стоимости обучения.</div>
             </div>
+
+            <div id="modal3" class="modal">
+                <div class="modal-content" style="background-image: none; background-color: #ffffff;">
+                    <span class="close">&times;</span>
+                    <h2>Вернешь 13% от стоимости обучения</h2>
+                    <button id="ModalW" class="Mbtn" data-modal="modal">Воспользоваться</button>
+                </div>
+            </div>
+
+            <!--  -->
+
         </section>
-        <hr id="addservices"> <h2 class="mainsec">Доступные улуги</h2> <hr>
+        <hr id="addservices"> <h2 class="mainsec">Выбери категорию</h2> <hr>
         <section class="addservices">
             <div class="tabs-container">
                 <div class="tabs-header">
-                    <button class="tab-button active" data-tab="tab1">Категория B</button>
+                    <button class="tab-button active" data-tab="tab1">Категория B  - МКПП/АКПП</button>
                     <button class="tab-button" data-tab="tab2">Дополнительные услуги</button>
                     <button class="tab-button" data-tab="tab3">Переподготовка C на B</button>
                 </div>
