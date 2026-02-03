@@ -22,8 +22,12 @@ body {
     height: 75px;
 }
 
+.logo {
+    padding-left: 5%
+}
+
 .address, .phone {
-    font-size: 16px;
+    font-size: 20px;
     color: #333;
     font-family: "Jura", sans-serif;
 }
@@ -266,6 +270,7 @@ hr {
     cursor: pointer;
     border-radius: 5px;
     font-size: 20px;
+    color: #840007;
     transition: background-color 0.3s;
 }
 
@@ -615,7 +620,11 @@ footer {
     text-align: right;
 }
 
- /* Модальное окно "Записаться" */
+ /* Модальное окно */
+
+#modal {
+    border: #840007 solid 2px;
+}
 
 .modal {
     display: none;
@@ -629,8 +638,9 @@ footer {
 }
 
 .modal-content {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(255, 255, 255);
     margin: 10% auto;
+    color: #333;
     padding: 20px;
     border-radius: 10px;
     width: 80%;
@@ -752,6 +762,10 @@ footer {
 
     .logo img {
         height: 50px;
+    }
+
+    .logo {
+        padding-left: 0%;
     }
 
     .address, .phone {
